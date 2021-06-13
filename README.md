@@ -1,7 +1,7 @@
-# Pierre's Flavor Town Portal
+# Animal Shelter API
 
 #### A Brief Description.
-_An MVC 'many-to-many'/Authentication with Identity example project._ 
+_A custom API that could be the basis for an Animal Shleter._ 
 
 ### By Giancarlo Vigneri
 ---
