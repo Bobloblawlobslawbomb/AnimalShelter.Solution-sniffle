@@ -17,6 +17,21 @@ namespace AnimalShelter.Controllers
       _db = db;
     }
 
+    ///<summary>
+    ///Get every Instance of Animal
+    ///</summary>
+
+    ///<remarks>Lookup an animal by inputted properties and return key details about the animal</remarks>
+
+    ///<param name="name" example="Snickers">Name</param>
+    ///<param name="category" example="Horse">Category</param>
+    ///<param name="intelligence" example="4">Intelligence</param>
+    ///<param name="temperment" example="Stupid">Temperment</param>
+    ///<param name="friendliness" example="Sweet">Friendliness</param>
+    ///<param name="ailment" example="Hip Dysplasia">Ailment</param>
+
+    ///<returns>JSON describing animal data to the entered animal id# (I think)</returns>
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Animal>>> Get(string name, string category, int intelligence, string temperment, string friendliness, string ailment)
     {
@@ -52,6 +67,9 @@ namespace AnimalShelter.Controllers
       }
       return await query.ToListAsync();
     }
+    ///<summary>
+    ///Update Animal Information.
+    ///</summary>
 
     [HttpPost]
     public async Task<ActionResult<Animal>> Post(Animal animal)
@@ -80,6 +98,7 @@ namespace AnimalShelter.Controllers
         return BadRequest();
       }
       _db.Entry(animal).State = EntityState.Modified;
+
       try
       {
         await _db.SaveChangesAsync();
