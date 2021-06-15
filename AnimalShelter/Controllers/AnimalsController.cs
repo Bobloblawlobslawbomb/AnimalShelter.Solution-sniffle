@@ -26,36 +26,31 @@ namespace AnimalShelter.Controllers
         query = query.Where(entry => entry.Name == name);
       }
 
-      var query = _db.Animals.AsQueryable();
       if (category != null)
       {
         query = query.Where(entry => entry.Category == category);
       }
 
-      var query = _db.Animals.AsQueryable();
-      if (intelligence != null)
+      if (intelligence != 0)
       {
         query = query.Where(entry => entry.Intelligence == intelligence);
       }
 
-      var query = _db.Animals.AsQueryable();
       if (temperment != null)
       {
         query = query.Where(entry => entry.Temperment == temperment);
       }
 
-      var query = _db.Animals.AsQueryable();
       if (friendliness != null)
       {
         query = query.Where(entry => entry.Friendliness == friendliness);
       }
 
-      var query = _db.Animals.AsQueryable();
       if (ailment != null)
       {
         query = query.Where(entry => entry.Ailment == ailment);
       }
-      return await query.ToListAsyn();
+      return await query.ToListAsync();
     }
 
     [HttpPost]
