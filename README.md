@@ -60,14 +60,23 @@ An API for a theoretical animal shelter database. Which allows the user to enter
     - open the newly created "appsettings.json" file
     - add the following code to the .json file:
 >   ```
->   {
->       "ConnectionStrings": {
->       "DefaultConnection": "Server=localhost;Port=3306;database=>> factory;uid=[YOUR USERNAME];pwd=[YOUR PASSWORD];"
->       }
->    }
+> {
+>   "Logging": {
+>     "LogLevel": {
+>        "Default": "Warning",
+>        "System": "Information",
+>        "Microsoft": "Information",
+>        "Microsoft.Hosting.Lifetime": "Information"
+>      }
+>    },
+> "AllowedHosts": "*",
+> "ConnectionStrings": {
+> "DefaultConnection": "Server=localhost;Port=3306;database=>> factory;uid=[YOUR USERNAME];pwd=[YOUR PASSWORD];"
+>     }
+> }
 >    ```
    >*_NOTE: make sure that [YOUR USERNAME] and [YOUR PASSWORD] match the database username and password of your local MySQL server (omit the square brackets. Also note: port 3306 is the default)_
-> - Run the command `dotnet restore` to restore the dependencies that are listed in `FlavorTown.csproj`
+> - Run the command `dotnet restore` to restore the dependencies that are listed in `AnimalShelter.csproj`
 >  - Run the command `dotnet build` to build the project and its dependencies into a set of binaries.
 > - Finally, run the command `dotnet run` to run the project!
 > - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app.
@@ -76,9 +85,6 @@ An API for a theoretical animal shelter database. Which allows the user to enter
 
 * _none...Yet_
 
-#### Background Image
-> Photo by: [Braden Collum](https://images.unsplash.com/photo-1620095198790-2f663d67677d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)
-> Via: [Unsplash](https://unsplash.com/)
 ---
 
 ## License [GPL] (https://choosealicense.com/licenses/gpl-3.0/)
@@ -89,4 +95,4 @@ _if you do run into any issues or have questions, ideas, or concerns; I would gr
 ## Contact Information
 _Contact Giancarlo Vigneri at: bobloblaw.vigneri@gmail.com_ 
 
-(A person walks into a bar and asks for helicopter flavored chips. The bartender says, "Sorry. We only have plain.")
+(If you don't like tacos, I'm nacho type.)
