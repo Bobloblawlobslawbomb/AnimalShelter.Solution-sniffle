@@ -1,25 +1,22 @@
 # Animal Shelter API
 
 #### A Brief Description.
-_A custom API that could be the basis for an Animal Shleter._ 
+_A custom API that could be the basis for an Animal Shelter._ 
 
 ### By Giancarlo Vigneri
 ---
 ## Technologies Used
 
 >* _VS Code_
->* _Html_
->* _CSS_
 >* _C#_
 >* _.NET 5 SDK_
 >* _ASP.NET_
 >* _Entity Framework_
->* _Bootstrap_
->* _Identity_
+>* _Swagger_
 
 ---
 ## Description 
-The program will allow someone to create an account for Pierre's Flavor Town (geez I hope that's copyrighted). The user can then access the rest of the site which allows said user to create 'Treats' (ex. donuts, maple bars, crullers, etc.), and 'Flavors' (sweet, savory, bitter, nasty). The user can then associate each object with as many of the other type as they see fit.
+An API for a theoretical animal shelter database. Which allows the user to enter different animals. The animal objects presently have these properties; Name, Category, Intelligence, Temperment, Friendliness, and Ailment. The also has versioning and Swagger implementation. 
 
 ---
 
@@ -31,7 +28,7 @@ The program will allow someone to create an account for Pierre's Flavor Town (ge
 - [MySQL Workbench](https://dev.mysql.com/downloads/file/?id=484391)
 - [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 - A text editor like [VS Code](https://code.visualstudio.com/)
-- A command line interface like Terminal or [GitBash](https://gitforwindows.org/) to run and interact with the console app.
+- A command line interface like Terminal or [GitBash](https://gitforwindows.org/) to run and interact with the app.
 
 ### Further Setup:
 
@@ -41,21 +38,21 @@ The program will allow someone to create an account for Pierre's Flavor Town (ge
 >* If you set up MySQL Server with a different username and/or password, the command will be `mysql -u[YourUsername] -p[YourPassword]` (omit the square brackets'[ ]')
 
 #### Importing `giancarlo_vigneri.sql` _(the included database .sql file)_:
-> (note: these instructions are only applicable after one has cloned the git repository: "https://github.com/Bobloblawlobslawbomb/FlavorTown.Solution-silver" -- see 'Running the Program' instructions below)
+> (note: these instructions are only applicable after one has cloned the git repository: "https://github.com/Bobloblawlobslawbomb/AnimalShelter.Solution-sniffle" -- see 'Running the Program' instructions below)
 > 1) Open __MySQL Workbench__.
 > 2) In the Navigator > Administration window, select Data Import/Restore.
 > 3) In Import Options select Import from Self-Contained File.
 > 4) Navigate to `giancarlo_vigneri.sql`.
 > 5) Under Default Schema to be Imported To, select the New button.
 > 6) Enter the name of the database.
->    - In this case: `flavor_town`.
+>    - In this case: `animal_shelter`.
 > 7) Click Ok.
 > 8) Click Start Import.
 > 9) Reopen the Navigator > Schemas tab. Right click and select Refresh All. _Our new test database will appear._
 
 ### Running the Program:
-> 1) Clone the repository: "https://github.com/Bobloblawlobslawbomb/FlavorTown.Solution-silver"
-> 2) Navigate to the 'FlavorTown.Solution/' directory on your computer
+> 1) Clone the repository: "https://github.com/Bobloblawlobslawbomb/AnimalShelter.Solution-sniffle"
+> 2) Navigate to the 'AnimalShlter.Solution/' directory on your computer
 > 3) Open with your favorite text editor (Visual Studio Code, is a pretty sweet one)
 > 4) To run the web app:
 >   - Navigate to `FlavorTown.Solution/FlavorTown` in your command line
