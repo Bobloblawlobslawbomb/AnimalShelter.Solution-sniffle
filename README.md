@@ -78,8 +78,18 @@ An API for a theoretical animal shelter database. Which allows the user to enter
    >*_NOTE: make sure that [YOUR USERNAME] and [YOUR PASSWORD] match the database username and password of your local MySQL server (omit the square brackets. Also note: port 3306 is the default)_
 > - Run the command `dotnet restore` to restore the dependencies that are listed in `AnimalShelter.csproj`
 >  - Run the command `dotnet build` to build the project and its dependencies into a set of binaries.
-> - Finally, run the command `dotnet run` to run the project!
-> - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app.
+> - Run the command `dotnet run` to run the project!
+> - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the app.
+
+### Using Swagger to explore the program and it's endpoints:
+> Once the program is running (via `dotnet run` or `dotnet watch run`) input the following into your browser: `http://localhost:5000/swagger` the programs endpoints will be easily accessible:
+> - GET `/api/Animals` -- gets every instance of Animal or searches via properties
+> - POST `/api/Animals` -- add an Animals information to the database
+> - GET `/api/Animals/{id}` -- gets an Animal via AnimalId
+> - PUT `/api/Animals/{id}` -- allows a user to update an Animals properties
+> - DELETE `/api/Animals/{id}` -- deletes an Animal by AnimalId
+
+---
 
 ## Known Bugs
 
